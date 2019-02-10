@@ -73,6 +73,7 @@ public:
 	void mover();
 	void choque(Tank &N);//fiuncion que detecte la colision (se crea una estructura de la clase nave)
 	void pintar_corazones();
+	void bala();
 };
 
 void Tank::pintarAr() {
@@ -158,7 +159,7 @@ void Tank::moverp1() {
 
 	}
 }
-void bala() {
+void Tank::bala() {
 	 {
 		gotoxy(xb, yb); printf("*");
 		if (falb == 1 && xb < 93 && xb > 4 && yb > 4 && yb < 43) {
@@ -289,6 +290,7 @@ int main() {
 
 
 				T.moverp2();
+				T.bala();
 				Sleep(30);
 			}
 			return 0;
